@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="listar()">
+  <div class="ShoppingCart">
+    <p>You have <b>3 itens</b> in your order</p>
+    <table>
+      <tr>
+        <th></th>
+        <th class = "expanded">NAME</th>
+        <th class = "smallExpanded">PRICE</th>
+        <th class = "smallExpanded">QUANTITY</th>        
+        <th class = "smallExpanded">TOTAL</th>    
+      </tr>
+      <tbody id="resultado">
+
+      </tbody>
+    </table>
+  
+    
+    <span>Subtotal: R$100</span>
+    <div class="cartFooter">
+
+      <button id="footerButton">Continue Shopping</button>
+      <button id="footerButton">Shopping Info</button>
+    </div>
+    <!-- vamos motivar -->
+  </div>
+</body>
+
+<script src="list.js"></script>
+
+</html>
