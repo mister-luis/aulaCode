@@ -7,7 +7,7 @@ var produtos = [
             title:"Roxo"
         },
         tamanho:[30,40,44],        
-        descrição:"Puma Golf Raglan Tech Polo Tee",
+        descrição:"Camisa Roxa",
         cor:"#663c8c",
         preco:100,
         qtd:1
@@ -63,15 +63,30 @@ var produtos = [
 </td>
 <td class="total-body">R$<b>100</b></td>        
 </tr> */}
+
+{/* <span>Subtotal: R$100</span> */}
+
+function total(){
+    var total = 0;
+    
+    for (var i = 0; i < produtos.length; i++) {
+        total += (produtos[i].preco*produtos[i].qtd);
+    }
+
+    var template = '<span>Subtotal: R$'+total+'</span>';
+
+    document.getElementById('subtotal').innerHTML = template;
+}
+
 function listar() {
     var template = "";
 
     for (var i = 0; i < produtos.length; i++) {
-        template += '<tr class="row-itens">';
-        template += '<td class="delete-body"><button class="delete-item">X</button></td>';
-        template += '<td class="name-body">';
+        template += '<tr class="Row">';
+        template += '<td class="delete-body"><button class="deleteButton">X</button></td>';
+        template += '<td class="item">';
         template += '<img src='+produtos[i].imagem.src+'>';
-        template += '<div class="name-body-description">';
+        template += '<div class="item-details">';
         template += '<p><b>'+produtos[i].descrição+'</b></p></br>';
         template += 'COLOR:<input type="color" value='+produtos[i].cor+'>';
         template += 'SIZE: <select>';
@@ -93,5 +108,6 @@ function listar() {
         
     }
     document.getElementById('resultado').innerHTML = template;
+    total();
     
 }
