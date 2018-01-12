@@ -103,7 +103,7 @@ function listar() {
         template += '<button class="button-plus">+</button>';
         template += '</div>';
         template += '</td>';
-        template += '<td class="total-body">R$<b>100</b></td>';
+        template += '<td class="total-body">R$<b>'+(produtos[i].qtd * produtos[i].preco)+'</b></td>';
         template += '</tr>';
         
     }
